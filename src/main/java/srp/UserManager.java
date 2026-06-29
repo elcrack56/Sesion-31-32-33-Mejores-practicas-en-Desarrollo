@@ -2,7 +2,6 @@ package srp;
 
 import java.util.regex.Pattern;
 
-// 1. Clases de soporte
 class UserValidator {
     public boolean isValidEmail(String email) {
         return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
@@ -27,7 +26,6 @@ class NotificationService {
     }
 }
 
-// 2. Única clase pública del archivo
 public class UserManager {
     private final UserValidator validator;
     private final UserRepository repository;
