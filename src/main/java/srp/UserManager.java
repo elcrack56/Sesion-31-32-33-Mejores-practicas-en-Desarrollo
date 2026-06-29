@@ -2,8 +2,7 @@ package srp;
 
 import java.util.regex.Pattern;
 
-// 1. Clases de soporte (Visibilidad de paquete, se mantienen en el mismo archivo)
-
+// 1. Clases de soporte
 class UserValidator {
     public boolean isValidEmail(String email) {
         return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
@@ -29,7 +28,6 @@ class NotificationService {
 }
 
 // 2. Única clase pública del archivo
-
 public class UserManager {
     private final UserValidator validator;
     private final UserRepository repository;
@@ -50,5 +48,17 @@ public class UserManager {
             System.out.println("Invalid email or password. User not added.");
             return false;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Iniciando sistema de gestión de usuarios...");
+
+        UserValidator validator = new UserValidator();
+        UserRepository repository = new UserRepository();
+        NotificationService notificationService = new NotificationService();
+
+        UserManager userManager = new UserManager(validator, repository, notificationService);
+
+        userManager.addUser("darwin.lopez.estrella@udla.edu.ec", "securePass123");
     }
 }
