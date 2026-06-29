@@ -1,1 +1,5 @@
+isp\DeviceSystemTest.class
+ocp\NotificationServiceTest.class
+dip\PaymentSystemTest.class
+lsp\AnimalSystemTest.class
 srp\UserManagerTest.class
