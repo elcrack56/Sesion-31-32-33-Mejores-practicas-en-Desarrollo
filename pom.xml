@@ -29,7 +29,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>srp.UserManager</mainClass>
+                    <mainClass>ocp.NotificationService</mainClass>
                 </configuration>
             </plugin>
         </plugins>
