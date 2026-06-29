@@ -29,7 +29,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>ocp.NotificationService</mainClass>
+                    <mainClass>lsp.AnimalSystem</mainClass>
                 </configuration>
             </plugin>
         </plugins>
